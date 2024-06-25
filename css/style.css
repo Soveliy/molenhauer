@@ -5,6 +5,7 @@ body {
   color: #000;
   font-size: 16px;
   line-height: 24px;
+  overflow-x: hidden;
 }
 
 .container {
@@ -105,6 +106,7 @@ body {
   position: relative;
   overflow: hidden;
   min-height: 100dvh;
+  z-index: 50;
 }
 .hero__bg {
   position: absolute;
@@ -293,4 +295,52 @@ body {
   left: -1px;
   transform: rotate(45deg);
   z-index: -2;
+}
+
+.services {
+  position: relative;
+  height: 1000px;
+}
+.services:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #06255b;
+  height: 100%;
+  width: 100%;
+  -webkit-clip-path: polygon(0 0, 0% 69%, 65.3% 0);
+          clip-path: polygon(0 0, 0% 69%, 65.3% 0);
+}
+.services__decor {
+  position: absolute;
+  top: -360px;
+  right: -357px;
+  height: 714px;
+  width: 714px;
+  background-color: #f7f9fc;
+  transform: rotate(-45deg);
+}
+.services__formula {
+  mix-blend-mode: multiply;
+  transform: rotate(45deg) translateX(170px) translateY(32px);
+}
+.services__row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.services__col {
+  width: 20%;
+}
+.services-item {
+  height: 152px;
+  position: relative;
+}
+.services-item:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: rotate(45deg) translate(-50%, -50%);
+  background-color: red;
 }
