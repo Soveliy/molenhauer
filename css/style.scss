@@ -318,7 +318,7 @@ body {
 
 .services {
     position: relative;
-    height: 1000px;
+    padding: 72px 0 76px;
     &:before {
         content: "";
         position: absolute;
@@ -328,6 +328,26 @@ body {
         height: 100%;
         width: 100%;
         clip-path: polygon(0 0, 0% 69%, 65.3% 0);
+    }
+    &__head {
+        position: relative;
+        max-width: 408px;
+        padding-left: 143px;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 100%;
+        letter-spacing: -0.03em;
+        color: #fff;
+        margin-bottom: 24px;
+    }
+    &__desc {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 130%;
+        letter-spacing: 0.02em;
+        color: #fff;
     }
     &__decor {
         position: absolute;
@@ -343,22 +363,81 @@ body {
         transform: rotate(45deg) translateX(170px) translateY(32px);
     }
     &__row {
+        position: relative;
         display: flex;
         flex-wrap: wrap;
+        max-width: 1110px;
+        margin-top: -225px;
+        padding-top: 32px;
+        padding-left: 55px;
+        box-sizing: border-box;
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: -33.4%;
+            right: -27.2%;
+            height: 498px;
+            width: 715px;
+            background: url(../images/services-scheme.png) no-repeat center center;
+            z-index: -1;
+        }
     }
     &__col {
         width: 20%;
+        margin: -30px 0;
     }
-    &-item {
-        height: 152px;
+    &__formula-bottom {
         position: relative;
-        &:before {
-            content: "";
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: rotate(45deg) translate(-50%, -50%);
-            background-color: red;
+        margin: 170px 0 32px 57px;
+    }
+    &__scroll {
+        max-width: 221px;
+        margin: 0 auto;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 120%;
+        letter-spacing: 0.01em;
+        text-align: center;
+        color: #53565a;
+
+        svg {
+            display: block;
+            margin: 21px auto 0;
         }
+    }
+}
+
+.services-item {
+    position: relative;
+    height: 264px;
+    width: 264px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border: 0.99px solid #d5d5d5;
+        background-color: #fff;
+        transform: rotate(45deg);
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: 0.02em;
+        text-align: center;
+        color: #313131;
+        margin-bottom: 10px;
+        position: relative;
+    }
+    svg {
+        position: relative;
     }
 }
