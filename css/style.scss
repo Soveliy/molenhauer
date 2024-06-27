@@ -441,3 +441,139 @@ body {
         position: relative;
     }
 }
+
+.expertise {
+    &__row {
+        display: flex;
+        background: url(../images/exp_after.svg) repeat-x center bottom;
+    }
+    &__col {
+        width: 100%;
+        border: 1px solid #e2e2e2;
+        box-sizing: border-box;
+
+        & + & {
+            border-left: none;
+        }
+    }
+    &-item {
+        position: relative;
+        perspective: 1000px;
+        height: 100%;
+        transition: 0.3s;
+        &:hover {
+            img {
+                opacity: 1;
+                transform: rotateY(0);
+                visibility: visible;
+                box-shadow: 0 15px 90px 0 rgba(19, 47, 79, 0.25);
+            }
+            .expertise-item__counter {
+                color: #fff;
+                text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+                svg {
+                    filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.25));
+                }
+                svg path {
+                    fill: #fff !important;
+                }
+            }
+            .expertise-item__name {
+                color: #fff;
+                text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+            }
+        }
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.6s;
+            transform: rotateY(180deg);
+            object-fit: cover;
+        }
+        &__body {
+            position: relative;
+            z-index: 10;
+            padding: 55px 32px 152px 42px;
+            box-sizing: border-box;
+        }
+        &__counter {
+            position: relative;
+            display: inline-block;
+            font-family: $mulish;
+            font-weight: 800;
+            font-size: 17px;
+            line-height: 100%;
+            letter-spacing: 0.02em;
+            color: #da5d24;
+            transition: 0.3s;
+            svg {
+                position: absolute;
+                top: 100%;
+                left: 100%;
+                transition: 0.3s;
+            }
+        }
+        &__name {
+            margin-top: 195px;
+            font-family: $mulish;
+            font-weight: 800;
+            font-size: 17px;
+            line-height: 100%;
+            letter-spacing: 0.02em;
+            color: #2f3034;
+            transition: 0.3s;
+        }
+    }
+}
+
+// .expertise-item {
+//     position: relative;
+//     width: 200px; /* Ширина карточки */
+//     height: 300px; /* Высота карточки */
+//     position: relative;
+//     perspective: 1000px; /* Устанавливаем перспективу для 3D эффекта */
+//     img {
+//         top: 0;
+//         left: 0;
+//         position: absolute;
+//         width: 100%;
+//         height: 100%;
+//         transform: rotateY(180deg); /* Повернутая на 180 градусов - начальное положение */
+//         transition: transform 0.6s ease; /* Анимация поворота */
+//     }
+// }
+
+// .card {
+// }
+
+// .card-face {
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     backface-visibility: hidden; /* Скрытие обратной стороны */
+//     transition: transform 0.6s ease; /* Анимация поворота */
+// }
+
+// .card-front {
+//     background-color: #3498db; /* Цвет лицевой стороны */
+//     color: white;
+// }
+
+// .card-back {
+//     background-color: #e74c3c; /* Цвет обратной стороны */
+//     color: white;
+//     transform: rotateY(180deg); /* Повернутая на 180 градусов - начальное положение */
+// }
+
+// .card:hover .card-front {
+//     transform: rotateY(-180deg); /* При наведении - поворот карточки */
+// }
+
+// .card:hover .card-back {
+//     transform: rotateY(0deg); /* При наведении - поворот карточки */
+// }
